@@ -1,0 +1,42 @@
+{
+  "name": "genpark-shopping-graph-realtime-price-drop-radar-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time e-commerce Shopping Graph price drop radar aggregating merchant feeds and historic all-time-low triggers.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "agent-commerce",
+  "tags": [
+    "google-shopping",
+    "price-radar",
+    "price-drops",
+    "shopping-graph",
+    "deal-finder"
+  ],
+  "inputs": {
+    "global_gtin_barcode": {
+      "type": "string"
+    },
+    "target_product_name": {
+      "type": "string"
+    },
+    "target_price_threshold_usd": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "radar_tracking_id": {
+      "type": "string"
+    },
+    "current_lowest_merchant_price_usd": {
+      "type": "number"
+    },
+    "lowest_merchant_name": {
+      "type": "string"
+    },
+    "price_history_graph_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
